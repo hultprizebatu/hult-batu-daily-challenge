@@ -1,13 +1,488 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#170936"><title>Daily Challenge | Hult Prize BATU</title><style>
-:root{color-scheme:dark;--bg:#0f0414;--purple:#291558;--pink:#ed2eb8;--cyan:#05aae5;--white:#f8f3ff}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 5% 0%,#5b1680 0%,transparent 38%),radial-gradient(ellipse at 95% 15%,#07559a 0%,transparent 42%),#0f0414;color:var(--white);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:690px;margin:0 auto;padding:34px 18px 65px}.hero{position:relative;border:1px solid #ffffff30;border-radius:26px;overflow:hidden;background:linear-gradient(135deg,#25114f,#1c0a3c 60%,#102a65);box-shadow:0 18px 70px #0007}.hero:before{content:"";position:absolute;inset:0 0 auto;height:6px;background:linear-gradient(90deg,var(--pink),#6d2f91,var(--cyan))}.heroInner{padding:25px 27px 30px}.brand{display:flex;gap:14px;align-items:center;direction:ltr}.brand img{width:88px;height:88px;object-fit:cover;border-radius:14px}.brandText{display:flex;flex-direction:column;gap:5px}.brandText strong{font-size:19px;line-height:1.1}.brandText small{font-size:11px;color:#e8cfee;letter-spacing:.04em}.eyebrow{margin:24px 0 7px;color:#64e9f5;font-size:12px;font-weight:800;letter-spacing:.18em;direction:ltr;text-align:right}h1{font-size:clamp(32px,8vw,53px);margin:0;line-height:1.15;direction:ltr;text-align:right}h1 span{background:linear-gradient(90deg,#f78ec6,#64e9f5);color:transparent;background-clip:text}p.sub{line-height:1.85;color:#e3d6ee;margin:13px 0 0;font-size:14px}.card{margin-top:20px;background:#1c0b39ed;border:1px solid #a46aca60;border-radius:22px;padding:24px;box-shadow:0 15px 55px #0005}.tag{display:inline-block;border:1px solid #ed2eb866;color:#f78ec6;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700}.challenge{font-size:22px;line-height:1.7;margin:18px 0 10px;font-weight:750}.muted{color:#c9b8dc;font-size:13px;line-height:1.7}label{display:block;font-weight:700;margin:20px 0 9px}input,textarea{width:100%;border-radius:13px;border:1px solid #8b6ba966;background:#110821;color:white;font:inherit;padding:14px 15px;outline:none}input:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #05aae522}textarea{min-height:125px;resize:vertical}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.choice{cursor:pointer;display:flex;align-items:center;justify-content:center;text-align:center;min-height:70px;padding:8px;border:1px solid #8164a280;background:#251047;border-radius:13px;font-weight:700;font-size:13px}.choice input{position:absolute;opacity:0;width:1px}.choice:has(input:checked){background:linear-gradient(135deg,#8a1a91,#165e9a);border-color:#64e9f5;box-shadow:0 0 0 2px #64e9f533}button{cursor:pointer;width:100%;margin-top:22px;padding:16px;border:0;border-radius:14px;background:linear-gradient(100deg,#ed2eb8,#7634bc,#05aae5);font:800 16px system-ui;color:white}button:disabled{opacity:.6;cursor:wait}.status{margin-top:12px;font-size:13px;line-height:1.7;min-height:20px}.foot{text-align:center;color:#ad9bbf;font-size:12px;margin-top:22px;direction:ltr}@media(max-width:450px){.choices{grid-template-columns:1fr}.choice{min-height:52px}.brand img{width:70px;height:70px}.card{padding:19px}.heroInner{padding:22px}}
-</style></head><body><main><section class="hero"><div class="heroInner"><div class="brand"><img src="assets/batu-brand.jpeg" alt="Hult Prize Borg El Arab Technological University official branding"><div class="brandText"><strong>HULT PRIZE BATU</strong><small>BORG EL ARAB TECHNOLOGICAL UNIVERSITY</small><small>SEASON 2027</small></div></div><div class="eyebrow">YOUR IDEAS MATTER</div><h1>DAILY <span>CHALLENGE.</span></h1><p class="sub">كل يوم سؤال جديد عن الابتكار وريادة الأعمال. شاركنا رأيك في تحدي النهارده 🚀</p></div></section><section class="card"><span class="tag" id="challengeTag">TODAY'S CHALLENGE</span><h2 class="challenge" id="challengeTitle">لو معاك فريق من 3 أصحابك، تحبوا تشتغلوا على فكرة في البيئة ولا التكنولوجيا ولا التعليم؟</h2><p class="muted" id="challengeHint">اختار المجال اللي تحبه وقولنا ليه.</p><form id="challengeForm"><label for="studentName">اسمك</label><input id="studentName" name="studentName" placeholder="اكتب اسمك" required maxlength="120"><label for="challengeDate">تاريخ التحدي</label><input type="date" id="challengeDate" name="challengeDate" required><div id="choiceSection"><label>هتختار أنهي مجال؟</label><div class="choices" id="choiceOptions"><label class="choice"><input type="radio" name="choice" value="البيئة" required>🌱 البيئة</label><label class="choice"><input type="radio" name="choice" value="التكنولوجيا">💻 التكنولوجيا</label><label class="choice"><input type="radio" name="choice" value="التعليم">📚 التعليم</label></div></div><label for="answer" id="answerLabel">ليه اخترت المجال ده؟</label><textarea id="answer" name="answer" required placeholder="اكتب إجابتك هنا..."></textarea><button id="submitBtn" type="submit">إرسال الإجابة ←</button><div class="status" id="status" role="status" aria-live="polite"></div></form></section><div class="foot">HULT PRIZE BATU · SEASON 2027</div></main><script>
-// ضع رابط Google Apps Script المنشور هنا بعد إتمام خطوات README.
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbysSQio2xTUwFsDTomNDoXMQNSYSIF1EWZcShdJCz2bcM9dnOz9qEDI6133gZiy_x7J/exec';
 
-// غيّر بيانات تحدي اليوم فقط، وسيب نفس رابط الصفحة.
-const CHALLENGE = {id:'challenge-001', title:'لو معاك فريق من 3 أصحابك، تحبوا تشتغلوا على فكرة في البيئة ولا التكنولوجيا ولا التعليم؟', hint:'اختار المجال اللي تحبه وقولنا ليه.', choices:['🌱 البيئة','💻 التكنولوجيا','📚 التعليم'], answerLabel:'ليه اخترت المجال ده؟'};
-const $=id=>document.getElementById(id);$('challengeTitle').textContent=CHALLENGE.title;$('challengeHint').textContent=CHALLENGE.hint;$('answerLabel').textContent=CHALLENGE.answerLabel;$('challengeTag').textContent='DAILY CHALLENGE · '+CHALLENGE.id.toUpperCase();
-if(CHALLENGE.choices?.length){$('choiceOptions').replaceChildren(...CHALLENGE.choices.map((v,i)=>{let l=document.createElement('label');l.className='choice';let r=document.createElement('input');r.type='radio';r.name='choice';r.value=v;r.required=true;l.append(r,document.createTextNode(v));return l;}));}else{$('choiceSection').hidden=true;}
-const today=new Date();const yyyy=today.getFullYear(),mm=String(today.getMonth()+1).padStart(2,'0'),dd=String(today.getDate()).padStart(2,'0');$('challengeDate').value=`${yyyy}-${mm}-${dd}`;
-$('challengeForm').addEventListener('submit',async e=>{e.preventDefault();let status=$('status');if(!SCRIPT_URL){status.textContent='التصميم جاهز، لكن إرسال الإجابات مش متفعّل لسه. اربط Google Sheet من ملف التعليمات الأول.';return;}let btn=$('submitBtn');btn.disabled=true;status.textContent='جاري إرسال الإجابة...';const data={studentName:$('studentName').value.trim(),challengeDate:$('challengeDate').value,challengeId:CHALLENGE.id,challengeTitle:CHALLENGE.title,choice:document.querySelector('input[name="choice"]:checked')?.value||'',answer:$('answer').value.trim()};try{await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)});status.textContent='وصلت إجابتك، شكرًا على مشاركتك 💜';$('challengeForm').reset();$('challengeDate').value=`${yyyy}-${mm}-${dd}`;}catch(err){status.textContent='حصلت مشكلة في الإرسال. اتأكد من إعدادات الربط وجرب تاني.';console.error(err);}finally{btn.disabled=false;}});
-</script></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#170936">
+<title>Daily Challenge | Hult Prize BATU</title>
+
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #0f0414;
+  --purple: #291558;
+  --pink: #ed2eb8;
+  --cyan: #05aae5;
+  --white: #f8f3ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 5% 0%, #5b1680 0%, transparent 38%),
+    radial-gradient(ellipse at 95% 15%, #07559a 0%, transparent 42%),
+    #0f0414;
+  color: var(--white);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+main {
+  max-width: 690px;
+  margin: 0 auto;
+  padding: 34px 18px 65px;
+}
+
+.hero {
+  position: relative;
+  border: 1px solid #ffffff30;
+  border-radius: 26px;
+  overflow: hidden;
+  background: linear-gradient(135deg,#25114f,#1c0a3c 60%,#102a65);
+  box-shadow: 0 18px 70px #0007;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 6px;
+  background: linear-gradient(90deg,var(--pink),#6d2f91,var(--cyan));
+}
+
+.heroInner { padding: 25px 27px 30px; }
+
+.brand {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  direction: ltr;
+}
+
+.brand img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.brandText strong {
+  font-size: 19px;
+  line-height: 1.1;
+}
+
+.brandText small {
+  font-size: 11px;
+  color: #e8cfee;
+  letter-spacing: .04em;
+}
+
+.eyebrow {
+  margin: 24px 0 7px;
+  color: #64e9f5;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  direction: ltr;
+  text-align: right;
+}
+
+h1 {
+  font-size: clamp(32px,8vw,53px);
+  margin: 0;
+  line-height: 1.15;
+  direction: ltr;
+  text-align: right;
+}
+
+h1 span {
+  background: linear-gradient(90deg,#f78ec6,#64e9f5);
+  color: transparent;
+  background-clip: text;
+}
+
+.sub {
+  line-height: 1.85;
+  color: #e3d6ee;
+  margin: 13px 0 0;
+  font-size: 14px;
+}
+
+.card {
+  margin-top: 20px;
+  background: #1c0b39ed;
+  border: 1px solid #a46aca60;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 15px 55px #0005;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid #ed2eb866;
+  color: #f78ec6;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.challenge {
+  font-size: 22px;
+  line-height: 1.7;
+  margin: 18px 0 10px;
+  font-weight: 750;
+}
+
+.muted {
+  color: #c9b8dc;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin: 20px 0 9px;
+}
+
+input, textarea {
+  width: 100%;
+  border-radius: 13px;
+  border: 1px solid #8b6ba966;
+  background: #110821;
+  color: white;
+  font: inherit;
+  padding: 14px 15px;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px #05aae522;
+}
+
+textarea {
+  min-height: 145px;
+  resize: vertical;
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  margin-top: 22px;
+  padding: 16px;
+  border: 0;
+  border-radius: 14px;
+  background: linear-gradient(100deg,#ed2eb8,#7634bc,#05aae5);
+  font: 800 16px system-ui;
+  color: white;
+}
+
+button:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.status {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 20px;
+}
+
+.foot {
+  text-align: center;
+  color: #ad9bbf;
+  font-size: 12px;
+  margin-top: 22px;
+  direction: ltr;
+}
+
+@media(max-width:450px) {
+  .brand img { width: 70px; height: 70px; }
+  .card { padding: 19px; }
+  .heroInner { padding: 22px; }
+}
+</style>
+</head>
+
+<body>
+<main>
+
+<section class="hero">
+  <div class="heroInner">
+    <div class="brand">
+      <img src="assets/batu-brand.jpeg"
+           alt="Hult Prize BATU branding">
+      <div class="brandText">
+        <strong>HULT PRIZE BATU</strong>
+        <small>BORG EL ARAB TECHNOLOGICAL UNIVERSITY</small>
+        <small>SEASON 2027</small>
+      </div>
+    </div>
+
+    <div class="eyebrow">YOUR IDEAS MATTER</div>
+    <h1>DAILY <span>CHALLENGE.</span></h1>
+    <p class="sub">
+      كل يوم سؤال جديد عن الابتكار وريادة الأعمال.
+      شاركنا رأيك في تحدي النهارده 🚀
+    </p>
+  </div>
+</section>
+
+<section class="card">
+  <span class="tag" id="challengeTag">DAILY CHALLENGE</span>
+
+  <h2 class="challenge" id="challengeTitle">
+    جاري تحميل سؤال اليوم...
+  </h2>
+
+  <p class="muted" id="challengeHint">
+    شاركنا فكرتك وإجابتك 💜
+  </p>
+
+  <form id="challengeForm" hidden>
+
+    <label for="studentName">👤 الاسم بالكامل</label>
+    <input id="studentName"
+           name="studentName"
+           placeholder="اكتب اسمك الثلاثي"
+           autocomplete="name"
+           required maxlength="120">
+
+    <label for="academicId">🎓 الرقم الأكاديمي</label>
+    <input id="academicId"
+           name="academicId"
+           type="text"
+           inputmode="numeric"
+           placeholder="اكتب الرقم الأكاديمي"
+           required maxlength="30">
+
+    <label for="whatsapp">📱 رقم الواتساب</label>
+    <input id="whatsapp"
+           name="whatsapp"
+           type="tel"
+           inputmode="tel"
+           placeholder="01xxxxxxxxx"
+           required maxlength="20">
+
+    <label for="answer">💡 إجابتك على سؤال اليوم</label>
+    <textarea id="answer"
+              name="answer"
+              required
+              maxlength="3000"
+              placeholder="اكتب إجابتك هنا..."></textarea>
+
+    <button id="submitBtn" type="submit">
+      🚀 إرسال الإجابة
+    </button>
+
+    <div class="status"
+         id="status"
+         role="status"
+         aria-live="polite"></div>
+  </form>
+</section>
+
+<div class="foot">
+  HULT PRIZE BATU · SEASON 2027
+</div>
+
+</main>
+
+<script>
+const SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbysSQio2xTUwFsDTomNDoXMQNSYSIF1EWZcShdJCz2bcM9dnOz9qEDI6133gZiy_x7J/exec';
+
+// أسئلة خطة الـ30 يوم بالترتيب
+const QUESTIONS = [
+  'لو عندك فرصة تغيّر حاجة واحدة في جامعتنا، هتبدأ بإيه؟',
+  'بتحب تبدأ مشروع بفكرة جديدة ولا بحل مشكلة موجودة؟',
+  'لو هتكوّن تيم، إيه أهم صفة لازم تكون في زمايلك؟',
+  'إيه أكتر مجال شايف إنه محتاج أفكار مبتكرة: التعليم ولا البيئة ولا التكنولوجيا؟',
+  'إيه أول سؤال بتسأله لنفسك لما تيجي في بالك فكرة مشروع؟',
+  'لو عندك يوم كامل تشتغل فيه على فكرة، هتعمل إيه الأول؟',
+  'بتفضل تشتغل في تيم ولا لوحدك؟ وليه؟',
+  'إيه مهارة نفسك تتعلمها عشان تحوّل أفكارك لمشاريع؟',
+  'لو قابلت رائد أعمال ناجح، هتسأله سؤال إيه؟',
+  'في رأيك، إيه اللي بيخلّي فكرة بسيطة مميزة؟',
+  'لو فكرتك اتقابلت برفض، هتطوّرها ولا تغيّرها؟',
+  'إيه أكتر تحدي بيواجه الطلبة في تنفيذ أفكارهم؟',
+  'تختار فكرة سهلة التنفيذ ولا فكرة جريئة محتاجة تجارب؟',
+  'لو هتعمل مشروع يخدم منطقتك، هيحل مشكلة إيه؟',
+  'إيه أهم في البداية: الفكرة ولا الفريق؟',
+  'لو معاك ميزانية صغيرة جدًا، إزاي هتختبر فكرتك؟',
+  'إيه أكتر اختراع بسيط بتستخدمه كل يوم وبتشوفه عبقري؟',
+  'هل الفشل في أول تجربة نهاية الفكرة ولا بداية تطويرها؟',
+  'لو تقدر تطوّر خدمة واحدة للطلبة، هتختار إيه؟',
+  'إيه أكتر حاجة بتشجعك تكمل في مشروع صعب؟',
+  'لو تقدر تضيف مهارة واحدة للتيم بتاعك، هتكون إيه؟',
+  'بتثق أكتر في رأي المستخدمين ولا رأي أصحابك في فكرتك؟',
+  'إيه رأيك: الابتكار لازم يكون اختراع جديد تمامًا؟',
+  'لو عندك 60 ثانية تعرض فيها فكرتك، هتبدأ بإيه؟',
+  'إيه المشكلة البيئية اللي نفسك تشوف ليها حل عملي؟',
+  'لو مشروعك نجح في حاجة واحدة، تحب تكون إيه؟',
+  'إيه أكتر عادة يومية ممكن تتحسن بفكرة ذكية؟',
+  'بتفضل تتعلم من تجربة فعلية ولا من شرح نظري؟',
+  'لو هتختار اسم لفريق ابتكار، هيكون إيه؟',
+  'بعد 30 يوم تفكير في الابتكار، إيه فكرة نفسك تبدأ تستكشفها؟'
+];
+
+const $ = id => document.getElementById(id);
+
+const formatter = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'Africa/Cairo',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  hourCycle: 'h23'
+});
+
+function getEgyptParts() {
+  const parts = Object.fromEntries(
+    formatter.formatToParts(new Date())
+      .filter(part => part.type !== 'literal')
+      .map(part => [part.type, part.value])
+  );
+
+  return {
+    year: Number(parts.year),
+    month: Number(parts.month),
+    day: Number(parts.day),
+    hour: Number(parts.hour)
+  };
+}
+
+function getChallenge() {
+  const p = getEgyptParts();
+
+  let date = Date.UTC(p.year, p.month - 1, p.day);
+
+  // قبل 7 مساءً نعرض سؤال اليوم السابق
+  if (p.hour < 19) {
+    date -= 86400000;
+  }
+
+  const start = Date.UTC(2026, 10, 19);
+  const index = Math.floor((date - start) / 86400000);
+
+  if (index < 0 || index >= QUESTIONS.length) {
+    return null;
+  }
+
+  return {
+    id: 'challenge-' + String(index + 1).padStart(3, '0'),
+    title: QUESTIONS[index],
+    date: new Date(date).toISOString().slice(0, 10),
+    day: index + 1
+  };
+}
+
+let activeChallenge = null;
+
+function updateChallenge() {
+  const next = getChallenge();
+  const previousId = activeChallenge?.id;
+
+  activeChallenge = next;
+
+  if (!next) {
+    $('challengeTag').textContent = 'DAILY CHALLENGE';
+    $('challengeTitle').textContent =
+      'لا يوجد سؤال متاح حاليًا 💜';
+    $('challengeHint').textContent =
+      'تابعنا لمعرفة التحديات القادمة.';
+    $('challengeForm').hidden = true;
+    return;
+  }
+
+  $('challengeForm').hidden = false;
+  $('challengeTag').textContent = 'DAY ' + next.day + ' / 30';
+  $('challengeTitle').textContent = next.title;
+  $('challengeHint').textContent =
+    'شاركنا رأيك. السؤال بيتغير الساعة 7 مساءً بتوقيت مصر 🚀';
+
+  if (previousId && previousId !== next.id) {
+    $('status').textContent =
+      'بدأ سؤال جديد! راجع إجابتك قبل الإرسال.';
+  }
+}
+
+updateChallenge();
+
+// تحديث تلقائي أثناء فتح الصفحة
+setInterval(updateChallenge, 15000);
+
+$('challengeForm').addEventListener('submit', async e => {
+  e.preventDefault();
+
+  const status = $('status');
+  const btn = $('submitBtn');
+  const latest = getChallenge();
+
+  if (!latest || latest.id !== activeChallenge?.id) {
+    updateChallenge();
+    status.textContent =
+      'سؤال اليوم اتغير. راجع السؤال الجديد وجرب تاني.';
+    return;
+  }
+
+  const data = {
+    studentName: $('studentName').value.trim(),
+    academicId: $('academicId').value.trim(),
+    whatsapp: $('whatsapp').value.trim(),
+    challengeDate: latest.date,
+    challengeId: latest.id,
+    challengeTitle: latest.title,
+    choice: '',
+    answer: $('answer').value.trim()
+  };
+
+  if (!data.studentName || !data.academicId ||
+      !data.whatsapp || !data.answer) {
+    status.textContent = 'من فضلك املا كل الخانات.';
+    return;
+  }
+
+  btn.disabled = true;
+  status.textContent = 'جاري إرسال الإجابة...';
+
+  try {
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      },
+      body: JSON.stringify(data)
+    });
+
+    status.textContent =
+      'تم إرسال الطلب 💜';
+
+    $('challengeForm').reset();
+
+  } catch (err) {
+    status.textContent =
+      'حصلت مشكلة في الإرسال. حاول مرة تانية.';
+    console.error(err);
+  } finally {
+    btn.disabled = false;
+  }
+});
+</script>
+
+</body>
+</html>
+
